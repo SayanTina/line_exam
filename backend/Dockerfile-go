@@ -1,0 +1,21 @@
+ARG GO_VERSION=golang:1.15-alpine
+
+FROM ${GO_VERSION}
+# ENV TZ=Asia/Bankgkok
+# ARG APP_NAME
+# ENV APP_NAME=${APP_NAME}
+
+WORKDIR /app
+
+COPY . /app
+
+## Deploy
+
+# Using go mod.
+RUN go mod download && go mod verify
+RUN go build -o /backend-go
+
+
+
+# RUN go get github.com/githubnemo/CompileDaemon
+# ENTRYPOINT CompileDaemon -diretory="./" --build="go build -o ./${APP_NAME}" --command="./${APP_NAME}"
