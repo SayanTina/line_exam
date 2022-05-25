@@ -23,7 +23,7 @@ cd /frontend/line_exam
 ```
 ### docker build images
 ```
-docker build --tag docker-frontend-vuejs
+docker build --tag docker-frontend-vuejs .
 ```
 ### docker run image as a container
 ```
