@@ -27,5 +27,5 @@ docker build --tag docker-frontend-vuejs
 ```
 ### docker run image as a container
 ```
-docker run -v ${PWD}:/app -v /app/node_modules -p 8081:8080 --rm docker-frontend-vuejs
+docker run docker-frontend-vuejs
 ```
