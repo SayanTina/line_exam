@@ -33,7 +33,6 @@ func SetupRouter() *gin.Engine {
 	//If you want to pass your route through specific middlewares
 	v1.Use(middlewares.UserMiddlewares())
 	{
-		v1.GET("server-status", apiController.ServerCheck)
 		v1.POST("health-check", apiController.HealthCheck)
 	}
 

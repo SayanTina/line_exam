@@ -80,7 +80,9 @@ export default {
     async uploadFile() {
       this.$emit('selectedFile')
       let result = await healthCheckService.healthCheckUpload(this.file)
-      this.$emit('result', result)
+      if(result != "failure") {
+        this.$emit('result', result)
+      }
     },
 
     requestUploadFile() {

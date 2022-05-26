@@ -27,9 +27,10 @@ export default {
     ).then(function (res) {
       return res
     })
-      .catch(function (err) {
-        console.log(err);
-        console.log('FAILURE!!');
-      });
+    .catch(function (err) {
+      alert(err.response.data.message)
+      console.log('FAILURE!!');
+      return "failure"
+    });
   }
 }
